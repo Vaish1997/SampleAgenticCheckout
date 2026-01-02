@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.UUID;
 import org.springframework.http.HttpStatus;
 
 
@@ -45,7 +44,7 @@ public class CheckoutSessionController{
         CheckoutSessionResponse response = CheckoutSessionResponseFixture.getFullResponse();
 
 
-        // Return 201 Created
+        // Return OK
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
