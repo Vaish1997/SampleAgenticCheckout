@@ -28,25 +28,75 @@ public class ProductService {
                         // use existing image filenames from resources/static/images/products
                         this.baseImageUrl + "pallettruck.png",
                         "5,500 lb capacity manual pallet truck",
-                        "in_stock"
+                        "in_stock",
+                        "pallet truck with ergonomic handle and durable steel frame",
+                        null,
+                        null,
+                        null
                 ),
                 new Product(
                         "PT4500",
                         "Industrial Pallet Jack 4500 lb",
                         new BigDecimal("589.00"),
                         "USD",
-                        this.baseImageUrl + "box.jpg",
+                        this.baseImageUrl + "pallettruck.png",
                         "Heavy-duty pallet jack for warehouses",
-                        "in_stock"
+                        "in_stock",
+                        "robust pallet jack with high load capacity and easy maneuverability",
+                        null,
+                        null,
+                        null
                 ),
                 new Product(
                         "PT6000",
                         "Lightweight Pallet Truck 2000 lb",
                         new BigDecimal("349.00"),
                         "USD",
-                        this.baseImageUrl + "tissuerolls.jpg",
+                        this.baseImageUrl + "pallettruck.png",
                         "Compact pallet truck for light-duty use",
-                        "in_stock"
+                        "in_stock",
+                        "lightweight design ideal for small warehouses and retail environments",
+                        null,
+        null,null
+                ),
+                new Product(
+                        "BOX5000",
+                        "White Corrugated Boxes - 5000 ct",
+                        new BigDecimal("199.00"),
+                        "USD",
+                        // use existing image filenames from resources/static/images/products
+                        this.baseImageUrl + "box.jpg",
+                        "5000 count of white corrugated boxes",
+                        "in_stock",
+                        "sturdy and reliable boxes for shipping and storage",
+                        "100",
+                        "150",
+                        "200"
+                ),
+                new Product(
+                        "BOX4500",
+                        "Brown Shipping Boxes - 4500 ct",
+                        new BigDecimal("589.00"),
+                        "USD",
+                        this.baseImageUrl + "box.jpg",
+                        "4500 count of brown shipping boxes",
+                        "in_stock",
+                        "durable boxes suitable for various shipping needs",
+                        "50",
+                        "50",
+                        "50"
+                ),
+                new Product(
+                        "BOX6000",
+                        "small corrugated boxes - 6000 ct",
+                        new BigDecimal("349.00"),
+                        "USD",
+                        this.baseImageUrl + "box.jpg",
+                        "6000 count of small corrugated boxes",
+                        "in_stock",
+                        "perfect for small items and retail packaging",
+                        "10",
+                        "10","10"
                 )
         );
     }
@@ -64,7 +114,7 @@ public class ProductService {
 
         return products.stream()
                 .filter(p ->
-                        p.getSku().toLowerCase().contains(q) ||
+                        p.getShortDescription().toLowerCase().contains(q) ||
                                 p.getName().toLowerCase().contains(q))
                 .limit(safeLimit)
                 .collect(Collectors.toList());
