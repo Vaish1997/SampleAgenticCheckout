@@ -1,5 +1,7 @@
 package com.example.demo.model.product;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.math.BigDecimal;
 
 public class Product {
@@ -11,6 +13,10 @@ public class Product {
     private String imageUrl;
     private String shortDescription;
     private String availability;
+    private String description;
+    private @Nullable String length;
+    private @Nullable String width;
+    private @Nullable String height;
 
     // Required by Jackson
     public Product() {
@@ -22,7 +28,11 @@ public class Product {
                    String currency,
                    String imageUrl,
                    String shortDescription,
-                   String availability) {
+                   String availability,
+                   String description,
+                   @Nullable String length,
+                   @Nullable String width,
+                   @Nullable String height) {
         this.sku = sku;
         this.name = name;
         this.price = price;
@@ -30,6 +40,10 @@ public class Product {
         this.imageUrl = imageUrl;
         this.shortDescription = shortDescription;
         this.availability = availability;
+        this.description = description;
+        this.length = length;
+        this.width = width;
+        this.height = height;
     }
 
     public String getSku() {
@@ -87,5 +101,39 @@ public class Product {
     public void setAvailability(String availability) {
         this.availability = availability;
     }
-}
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Nullable
+    public String getLength() {
+        return length;
+    }
+
+    public void setLength(@Nullable String length) {
+        this.length = length;
+    }
+
+    @Nullable
+    public String getWidth() {
+        return width;
+    }
+
+    public void setWidth(@Nullable String width) {
+        this.width = width;
+    }
+
+    @Nullable
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(@Nullable String height) {
+        this.height = height;
+    }
+}
