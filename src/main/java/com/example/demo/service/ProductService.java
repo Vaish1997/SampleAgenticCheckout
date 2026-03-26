@@ -21,43 +21,20 @@ public class ProductService {
         // initialize products after baseImageUrl is set
         this.products = List.of(
                 new Product(
-                        "PT5000",
-                        "Noblelift AC55 Pallet Truck",
-                        new BigDecimal("699.00"),
+                        "H-1043",
+                        "Uline Pallet Truck",
+                        new BigDecimal("395"),
                         "USD",
                         // use existing image filenames from resources/static/images/products
                         this.baseImageUrl + "pallettruck.png",
-                        "5,500 lb capacity manual pallet truck",
+                        "Uline Pallet Truck - Standard Fork, 48 x 27\"",
                         "in_stock",
-                        "pallet truck with ergonomic handle and durable steel frame",
+                        "3-position hand control - Raise, lower, neutral.\n" +
+                                "3\" lowered and 7.5\" raised height.\n" +
+                                "7\" polyurethane steering wheels. 3\" polyurethane fork wheels",
                         null,
                         null,
                         null
-                ),
-                new Product(
-                        "PT4500",
-                        "Industrial Pallet Jack 4500 lb",
-                        new BigDecimal("589.00"),
-                        "USD",
-                        this.baseImageUrl + "pallettruck.png",
-                        "Heavy-duty pallet jack for warehouses",
-                        "in_stock",
-                        "robust pallet jack with high load capacity and easy maneuverability",
-                        null,
-                        null,
-                        null
-                ),
-                new Product(
-                        "PT6000",
-                        "Lightweight Pallet Truck 2000 lb",
-                        new BigDecimal("349.00"),
-                        "USD",
-                        this.baseImageUrl + "pallettruck.png",
-                        "Compact pallet truck for light-duty use",
-                        "in_stock",
-                        "lightweight design ideal for small warehouses and retail environments",
-                        null,
-        null,null
                 ),
                 new Product(
                         "BOX5000",
